@@ -1,34 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## This Application is in Alpha Release ##
 
-## Getting Started
+# AlternateCMS
 
-First, run the development server:
+A powerful, consistent, and flexible headless content management framework. Built using the Nextjs framework, AlternateCMS provides headless content management system capabilities for sites of all types. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+https://app.netlify.com/start/deploy?repository=https://github.com/meeovi/alternatecms-next
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features include:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- AlternateCMS supports MySQL, SQlite, Postgres, Supabase, SQL Server, CockroachDB
+- Blog Functionality with tags, publishing dates, draft, and enhanced editor support
+- Extendible system that supports Nextjs, Vuejs modules, and Fastify extensions
+- Inventory Management System with support for Unlimited Products with product attributes and product types, categories, multi-channel creation, graphql
+- Per page & entire system SEO
+- Integrated File System Manager
+- Automatically generated Graphql powered Datatables and Forms.
+- Powerful Search capabilities integrates with Algolia, Typesense, Meilisearch, itemsAPI, Elasticsearch, and Opensearch extensions
+- Graphql support & Rest Apis with Rest Documentation
+- Integrated reporting tools and Sentry integration
+- Easily deploy with Netlify
+- Enhanced Security with monthly updates
+- Designed with Bootstrap and Fontawesome
+- Multi-lingual support
+- Sales features including creation of agreements, invoices, transactions, returns, Sales reports, and more
+- Dashboard sneek peak with your data
+- Customer management features including creating & managing customers, customer segments, and reviews.
+- Manage cities, countries, states, taxes
+- Flexible Media Manager with Visual Previews, expiration date, and comments.
+- Filterable datatables with export functionality
+- PWA Support with push notifications, desktop notifications, and offline caching
+- Mobile, Desktop, and Docker support
+- Built in ERP (Enterprise Resource Planning) includes Project Management, Checklist, Error Reporting, Visits, Team Scheduler, Deep Dives, Dashboard Creations.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+and much more. Take a look at www.alternatecms.com 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Prerequisites:
 
-## Learn More
+You will need:
 
-To learn more about Next.js, take a look at the following resources:
+Git = https://git-scm.com/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Nodejs = https://nodejs.org/en/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We recommend postgres as the database 
 
-## Deploy on Vercel
+rename .sample.env file to .env 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Add your database type to DATABASE_PROVIDER, example is DATABASE_PROVIDER="postgresql" (" " are required)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Add your database credentials to DATABASE_URL, example is DATABASE_URL=postgresql://databaseusername:databasepassword@databasehost:5432/databasename
+
+## Steps to Install - 10 Minute Install
+
+1. git clone https://github.com/meeovi/alternatecms-next
+2. cd alternatecms
+3. npm install
+4. npm run all
+
+AlternateCMS will be at: http://localhost:8000
+
+AlternateCMS API Documentation is located at: http://localhost:4000/swagger
+
+## If you have an existing database
+
+1. git clone https://github.com/meeovi/alternatecms-next
+2. cd alternatecms
+3. npm install
+4. prisma db pull
+5. npm run all
+
+## To update AlternateCMS
+
+1. npm run alternate-update
+
+AlternateCMS will be at: http://localhost:8000
+
+AlternateCMS Graphiql Playground will be at: http://localhost:4000/graphql
+
+AlternateCMS API Documentation is located at: http://localhost:4000/swagger
+
+More installation and deployment details are located at https://docs.alternatecms.com
