@@ -1,157 +1,157 @@
 export function Files() {
     return (
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Add New Media</h5>
-      <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+  <div className="modal-content">
+    <div className="modal-header">
+      <h5 className="modal-title" id="exampleModalLabel">Add New Media</h5>
+      <button type="button" className="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
     </div>
-    <div class="modal-body">
+    <div className="modal-body">
   <div>
     <FormulateForm method="POST" enctype="multipart/form-data" @submit.prevent>
-        <div class="col-9">
-          <div id="v-tabs-tabContent" class="tab-scope">
-            <div id="v-tabs-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
-              <div class="table table-responsive">
-                <table class="table">
-                  <tbody class="row">
-                    <tr class="col-lg-6">
+        <div className="col-9">
+          <div id="v-tabs-tabContent" className="tab-scope">
+            <div id="v-tabs-home" className="tab-pane fade show active" role="tabpanel" aria-labelledby="v-tabs-home-tab">
+              <div className="table table-responsive">
+                <table className="table">
+                  <tbody className="row">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput type="file" v-model="media" label="Select an media to upload" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="name" type="text" required label="Media Name" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="keywords" type="text" label="Media Keywords" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="content_type" label="Content Type" type="text" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="copyright" type="text" label="Copyright" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="dimensions" type="text" label="Dimensions" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="expiration_date" type="datetime-local" label="Expiration Date" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="versions" type="text" label="Version" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="comment" type="textarea" label="Comment" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="watermark_name" type="text" label="Watermark Name" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="watermark_media" type="image" label="Upload your watermark image" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="watermark_description" type="textarea" label="Watermark Description" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <label for="customers">Author(s)</label><br>
-                        <select id="category" v-model="author" name="template" class="form-category">
+                        <select id="category" v-model="author" name="template" className="form-category">
                           <option v-for="customers in findManyCustomers" :key="customers" :value="customers">
                             {{ customers.name }}</option>
                         </select>
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <label for="brands">Brands</label><br>
-                        <select id="category" v-model="brands" name="template" class="form-category">
+                        <select id="category" v-model="brands" name="template" className="form-category">
                           <option v-for="brands in findManyBrands" :key="brands" :value="brands">
                             {{ brands.name }}</option>
                         </select>
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <label for="users">Members</label><br>
-                        <select id="category" v-model="members" name="template" class="form-category">
+                        <select id="category" v-model="members" name="template" className="form-category">
                           <option v-for="users in findManyUsers" :key="users" :value="users">
                             {{ users.name }}</option>
                         </select>
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <label for="agreements">Agreements</label><br>
-                        <select id="category" v-model="agreements" name="template" class="form-category">
+                        <select id="category" v-model="agreements" name="template" className="form-category">
                           <option v-for="agreements in findManyAgreements" :key="agreements" :value="agreements">
                             {{ agreements.name }}</option>
                         </select>
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <label for="tags">Tags</label><br>
-                        <select id="category" v-model="tags" name="template" class="form-category">
+                        <select id="category" v-model="tags" name="template" className="form-category">
                           <option v-for="tags in findManyTags" :key="tags" :value="tags">
                             {{ tags.name }}</option>
                         </select>
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <label for="workspace">Workspace</label><br>
-                        <select id="category" v-model="author" name="template" class="form-category">
+                        <select id="category" v-model="author" name="template" className="form-category">
                           <option v-for="workspace in findManyWorkspaces" :key="workspace" :value="workspace">
                             {{ workspace.name }}</option>
                         </select>
                       </td>
                     </tr>
-                    <tr class="col-lg-12">
+                    <tr className="col-lg-12">
                       <td>
                         <label for="checklist">Task Name</label><br>
-                        <select id="checklist" v-model="task_name" name="template" class="form-category">
+                        <select id="checklist" v-model="task_name" name="template" className="form-category">
                           <option v-for="checklist in checklists" :key="checklist" :value="checklist">
                             {{ checklist.name }}</option>
                         </select>
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="task_type" type="select"
                           :options="{first: 'Published', second: 'In Review', third: 'Draft'}" label="Task Type" />
                       </td>
                     </tr>
-                    <tr class="col-lg-6">
+                    <tr className="col-lg-6">
                       <td>
                         <FormulateInput v-model="task_description" type="textarea" label="Task Description" />
                       </td>
                     </tr>
-                    <tr class="col-lg-12">
+                    <tr className="col-lg-12">
                       <td>
                         <label for="members">Related Products</label><br>
-                        <select id="members" v-model="products" name="template" class="form-category">
+                        <select id="members" v-model="products" name="template" className="form-category">
                           <option v-for="members in products" :key="members" :value="members">
                             {{ members.name }}</option>
                         </select>
@@ -161,24 +161,24 @@ export function Files() {
                 </table>
               </div>
               <br><br>
-              <div id="accordionExample" class="accordion">
-                <div class="accordion-item">
-                  <h2 id="headingOne" class="accordion-header">
-                    <FormulateInput class="accordion-button" type="button" data-mdb-toggle="collapse"
+              <div id="accordionExample" className="accordion">
+                <div className="accordion-item">
+                  <h2 id="headingOne" className="accordion-header">
+                    <FormulateInput className="accordion-button" type="button" data-mdb-toggle="collapse"
                       data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Content
                     </FormulateInput>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                  <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-mdb-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <div class="table table-responsive">
-                        <table class="table">
+                    <div className="accordion-body">
+                      <div className="table table-responsive">
+                        <table className="table">
                           <tbody>
                             <tr>
                               <td style="text-align: right;">Albums</td>
                               <td>
-                                <div class="form-check form-switch">
+                                <div className="form-check form-switch">
                                   <FormulateInput v-model="albums" type="text" />
                                 </div>
                               </td>
@@ -186,7 +186,7 @@ export function Files() {
                             <tr>
                               <td style="text-align: right;">Description</td>
                               <td>
-                                <div class="form-check form-switch">
+                                <div className="form-check form-switch">
                                   <vue-simplemde id="longDescription" v-model="description" />
                                 </div>
                               </td>
@@ -203,9 +203,9 @@ export function Files() {
         </div>
     </FormulateForm>
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary" @submit.prevent="addMediamanager">Save changes</button>
+    <div className="modal-footer">
+      <button type="button" className="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+      <button type="button" className="btn btn-primary" @submit.prevent="addMediamanager">Save changes</button>
     </div>
   </div>
   </div>

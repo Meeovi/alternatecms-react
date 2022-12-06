@@ -16,7 +16,7 @@ const findManyProducts = gql`{
   
   export function Mostviewed() {
       return (
-      <div class="col">
+      <div className="col">
         <ApolloTableQL query={findManyProducts} sort pagination={
     {
       pageLimit: 5,

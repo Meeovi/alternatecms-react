@@ -3,7 +3,7 @@
 
 export function Notifications() {
     return (
-  <div class="notification is-danger">
+  <div className="notification is-danger">
     {{ message }}
   </div>
 
