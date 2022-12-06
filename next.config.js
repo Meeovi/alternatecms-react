@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
+require('./public/mdb/js/mdb.min.js')
+
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
   webpack: (config, { isServer }) => {
     // Fixes npm packages that depend on `fs` module

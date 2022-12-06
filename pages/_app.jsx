@@ -1,11 +1,10 @@
 
 import Header from '../common/components/Header.js'
 import Footer from '../common/components/Footer.js'
-import 'mdb-ui-kit';
-import 'mdb-ui-kit/css/mdb.min.css';
-
-//import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+//import 'mdb-ui-kit';
 import "@fortawesome/fontawesome-free/css/all.min.css"
+import '../public/mdb/css/mdb.min.css'
+import '../public/styles/styles.css'
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 
 function App({ Component, pageProps }) {
@@ -62,8 +61,6 @@ function App({ Component, pageProps }) {
       <link rel='apple-touch-startup-image' href='/images/apple_splash_1242.png' sizes='1242x2208' />
       <link rel='apple-touch-startup-image' href='/images/apple_splash_750.png' sizes='750x1334' />
       <link rel='apple-touch-startup-image' href='/images/apple_splash_640.png' sizes='640x1136' />
-      <link rel='stylesheet' href='../styles/globals.css' />
-      <link rel='stylesheet' href='../public/styles/styles.css' />
     </head>
       <ApolloProvider client={client}>
         <Header />
