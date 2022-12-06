@@ -16,7 +16,7 @@ const findManyCustomers = `{
   
   export function NewCustomers() {
       return (
-      <div class="col">
+      <div className="col">
         <ApolloTableQL query={findManyCustomers} sort pagination={
     {
       pageLimit: 5,

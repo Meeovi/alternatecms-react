@@ -209,7 +209,7 @@ export function Header() {
         </div>
 
         <ul className="navbar-nav ms-auto d-flex flex-row">
-          <colormode />
+         {/*} <colormode />
       <li className="nav-item dropdown">
             <a className="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
               role="button" data-mdb-toggle="dropdown" aria-expanded="false">
@@ -260,7 +260,7 @@ export function Header() {
                 <a className="dropdown-item" href="#"><i className="flag-portugal flag"></i>Português</a>
               </li>
             </ul>
-          </li>
+  </li> */}
 
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"

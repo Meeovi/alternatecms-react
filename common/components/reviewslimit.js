@@ -19,7 +19,7 @@ const findManyReviews = gql`{
   
   export function Reviewslimit() {
       return (
-      <div class="col">
+      <div className="col">
         <ApolloTableQL query={findManyReviews} sort pagination={
     {
       pageLimit: 5,

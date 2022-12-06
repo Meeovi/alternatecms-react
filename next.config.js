@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-require('./public/mdb/js/mdb.min.js')
 
 const nextConfig = {
   reactStrictMode: false,

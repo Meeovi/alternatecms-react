@@ -17,7 +17,7 @@ const ApolloTableQL = dynamic(() => import('react-tableql').then((m) => {
 
 export function Customerslimit() {
     return (
-    <div class="col">
+    <div className="col">
       <ApolloTableQL query={findManyCustomers} sort pagination={
   {
     pageLimit: 5,

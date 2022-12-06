@@ -11,8 +11,8 @@ export function Footer() {
             AlternateCMS</a></strong>
       </div>
     </footer>
-    <div className="btn-group dropup" style={{float: "right", right: "5px", bottom: "5px", position: "fixed;"}}>
-      <button type="button" className="btn btn-warning dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" style={{borderRadius: "30px;"}}>
+    <div className="btn-group dropup" style={{float: "right", right: "5px", bottom: "5px", position: "fixed"}}>
+      <button type="button" className="btn btn-warning dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" style={{borderRadius: "30px"}}>
         <i className="fas fa-question-circle"></i>
       </button>
       <ul className="dropdown-menu">

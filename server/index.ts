@@ -14,9 +14,18 @@ import { resolvers } from "../prisma/generated/type-graphql";
 import { useSentry } from '@envelop/sentry';
 import { useSofaWithSwaggerUI } from '@graphql-yoga/plugin-sofa'
 import '@sentry/tracing';
+import type { NextApiRequest, NextApiResponse } from 'next'
+
 //import { ApolloGateway } from '@apollo/gateway'
 //import { useApolloFederation } from '@envelop/apollo-federation'
 import fastify, { FastifyRequest, FastifyReply } from 'fastify'
+
+export const config = {
+  api: {
+    // Disable body parsing (required for file uploads)
+    bodyParser: false,
+  },
+}
 
 // This is the fastify instance you have created
 const app = fastify({
@@ -57,9 +66,11 @@ async function main() {
   // Graphql Server main function 
 
   const yoga = createYoga < {
-    req: FastifyRequest
     reply: FastifyReply
+    req: NextApiRequest
+    res: NextApiResponse
   } > ({
+    graphqlEndpoint: '/graphql',
     // Integrate Fastify logger
     logging: {
       debug: (...args) => args.forEach((arg) => app.log.debug(arg)),
@@ -122,13 +133,12 @@ async function main() {
 
   const server = createServer(yoga)
 
-  app.route({
+  /* app.route({
     url: '/graphql',
     method: ['GET', 'POST', 'OPTIONS'],
     handler: async (req, reply) => {
       // Second parameter adds Fastify's `req` and `reply` to the GraphQL Context
       const response = await yoga.handleNodeRequest(req, {
-        req,
         reply
       })
       response.headers.forEach((value, key) => {
@@ -142,7 +152,7 @@ async function main() {
       return reply
     }
     
-  })
+  }) */
 
   server.listen(4000, () => {
     console.info('Server is running on http://localhost:4000/graphql')
